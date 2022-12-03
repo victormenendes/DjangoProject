@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chapokas</title>
     <link rel="icon" href="favicon.png">
-    <link href="tailwind.css" rel="stylesheet">
+    <link href="{% static 'tailwind.css' %}" rel="stylesheet">
+    <script src="{% static 'bundle.js' %}" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,9 +28,9 @@
         <div class="a da">
             <div class="e ea sb je me">
                 <div class="dd od vg co">
-                    <a href="index.html" class="qb oc th wo">
+                    <a href="{% url 'index' %}" class="qb oc th wo">
           <img
-            src="src/assets/images/logo/logo.svg"
+            src="{% static 'src/assets/images/logo/logo.svg' %}"
             alt="logo"
             class="oc"
           />
@@ -79,7 +80,7 @@
                                     <div :class="categories ? 'qb' : 'ub' " class="e t m y ve wf bk dn en do ko oo yo">
                                         <span class="d u v z ub zb rc be _e cf lf mf nf wf on"></span>
                                         <div class="lh so">
-                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                       Arts & Crafts
                     </a>
                                         </div>
@@ -113,19 +114,19 @@
                                                             <h3 class="ra ui bj gj">
                                                                 New Arrivals
                                                             </h3>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Dresses
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Jackets
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Sweatshirts
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Tops & Tees
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Party Dresses
                             </a>
                                                         </div>
@@ -135,19 +136,19 @@
                                                             <h3 class="ra ui bj gj">
                                                                 New Arrivals
                                                             </h3>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Dresses
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Jackets
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Sweatshirts
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Tops & Tees
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Party Dresses
                             </a>
                                                         </div>
@@ -155,7 +156,7 @@
                                                     <div class="oc lh ao/3">
                                                         <a href="javascript:void(0)" class="xe">
                             <img
-                              src="src/assets/ecom-images/navbars/navbar-02/bannder.jpg"
+                              src="{% static 'src/assets/ecom-images/navbars/navbar-02/bannder.jpg' %}"
                               alt="banner"
                               class="oc xe"
                             />
@@ -165,29 +166,29 @@
                                             </div>
                                         </div>
                                         <div class="lh so">
-                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                       Bags & Shoes
                     </a>
                                         </div>
                                         <div class="lh so">
-                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                       Jewelry & Watch
                     </a>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="index.html" class="sb me mh ui dj lj ik hn rn ap up">
+                                    <a href="{% url 'index' %}" class="sb me mh ui dj lj ik hn rn ap up">
                   Home
                 </a>
                                 </li>
                                 <li>
-                                    <a href="filters.html" class="sb me mh ui dj lj ik hn qn ap">
+                                    <a href="{% url 'produtos' %}" class="sb me mh ui dj lj ik hn qn ap">
                   Shop
                 </a>
                                 </li>
                                 <li>
-                                    <a href="filters.html" class="sb me mh ui dj lj ik hn qn ap">
+                                    <a href="{% url 'produtos' %}" class="sb me mh ui dj lj ik hn qn ap">
                   Products
                 </a>
                                 </li>
@@ -217,13 +218,13 @@
                 </a>
 
                                     <div :class="!submenuOpen ? 'ub on' : 'qb' " class="e t m ve wf lh bk vk bn dn en do ko oo yo so np pp qp">
-                                        <a href="index.html" class="qb xe mh xi dj hj ik">
+                                        <a href="{% url 'index' %}" class="qb xe mh xi dj hj ik">
                     Home
                   </a>
                                         <a href="checkout.html" class="qb xe mh xi dj hj ik">
                     Checkout
                   </a>
-                                        <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                        <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                     Filters
                   </a>
                                         <a href="order-summary.html" class="qb xe mh xi dj hj ik">
@@ -331,7 +332,7 @@
                                         <div class="ja sb je me ci">
                                             <div class="sb je rh">
                                                 <div class="ya hc oc kd se xe">
-                                                    <img src="src/assets/ecom-images/checkout/checkout-02/image-02.jpg" alt="product image" class="oc" />
+                                                    <img src="{% static 'src/assets/ecom-images/checkout/checkout-02/image-02.jpg' %}" alt="product image" class="oc" />
                                                 </div>
                                                 <div>
                                                     <a href="javascript:void(0)" class="xi dj gj ik">
@@ -351,7 +352,7 @@
                                         <div class="ja sb je me ug">
                                             <div class="sb je rh">
                                                 <div class="ya hc oc kd se xe">
-                                                    <img src="src/assets/ecom-images/checkout/checkout-02/image-03.jpg" alt="product image" class="oc" />
+                                                    <img src="{% static 'src/assets/ecom-images/checkout/checkout-02/image-03.jpg' %}" alt="product image" class="oc" />
                                                 </div>
                                                 <div>
                                                     <a href="javascript:void(0)" class="xi dj gj ik">
@@ -416,7 +417,7 @@
                                         <div class="ja sb je me ci">
                                             <div class="sb je rh">
                                                 <div class="ya hc oc kd se xe">
-                                                    <img src="src/assets/ecom-images/checkout/checkout-02/image-02.jpg" alt="product image" class="oc" />
+                                                    <img src="{% static 'src/assets/ecom-images/checkout/checkout-02/image-02.jpg' %}" alt="product image" class="oc" />
                                                 </div>
                                                 <div>
                                                     <a href="product-details.html" class="xi dj gj ik">
@@ -436,7 +437,7 @@
                                         <div class="ja sb je me ug">
                                             <div class="sb je rh">
                                                 <div class="ya hc oc kd se xe">
-                                                    <img src="src/assets/ecom-images/checkout/checkout-02/image-03.jpg" alt="product image" class="oc" />
+                                                    <img src="{% static 'src/assets/ecom-images/checkout/checkout-02/image-03.jpg' %}" alt="product image" class="oc" />
                                                 </div>
                                                 <div>
                                                     <a href="product-details.html" class="xi dj gj ik">
@@ -544,7 +545,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare vestibulum mollis. Nam vitae augue purus.
                                 </p>
 
-                                <a href="filters.html" class="tb je le ye yf gh dh si ui bj jj hk">
+                                <a href="{% url 'produtos' %}" class="tb je le ye yf gh dh si ui bj jj hk">
                     Shop Now
                   </a>
                             </div>
@@ -552,7 +553,7 @@
 
                         <div class="oc vg ao/2">
                             <div class="hh si">
-                                <img src="src/assets/ecom-images/headers/header-03/image-01.jpg" alt="product" class="da od" />
+                                <img src="{% static 'src/assets/ecom-images/headers/header-03/image-01.jpg' %}" alt="product" class="da od" />
                             </div>
                         </div>
                     </div>
@@ -616,7 +617,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare vestibulum mollis. Nam vitae augue purus.
                                 </p>
 
-                                <a href="filters.html" class="tb je le ye yf gh dh si ui bj jj hk">
+                                <a href="{% url 'produtos' %}" class="tb je le ye yf gh dh si ui bj jj hk">
                     Shop Now
                   </a>
                             </div>
@@ -624,7 +625,7 @@
 
                         <div class="oc vg ao/2">
                             <div class="hh si">
-                                <img src="src/assets/ecom-images/headers/header-03/image-01.jpg" alt="product" class="da od" />
+                                <img src="{% static 'src/assets/ecom-images/headers/header-03/image-01.jpg' %}" alt="product" class="da od" />
                             </div>
                         </div>
                     </div>
@@ -713,13 +714,13 @@
             <div class="ea sb he">
                 <div class="oc vg ao/2">
                     <div class="e na gl tn wp">
-                        <img src="src/assets/ecom-images/categories/category-03/image-01.jpg" alt="category" class="wb oc mg ng" />
+                        <img src="{% static 'src/assets/ecom-images/categories/category-03/image-01.jpg' %}" alt="category" class="wb oc mg ng" />
                         <div class="d h m wb oc xg yg vl">
                             <div class="pd">
                                 <span class="ra qb ui bj hj">
                     #House
                   </span>
-                                <a href="filters.html" class="vi bj gj yl lp oq">
+                                <a href="{% url 'produtos' %}" class="vi bj gj yl lp oq">
                     Express Your Beautiful Life Through Furniture
                   </a>
                             </div>
@@ -729,13 +730,13 @@
 
                 <div class="oc vg ao/2">
                     <div class="e na cc hl un xp">
-                        <img src="src/assets/ecom-images/categories/category-03/image-02.jpg" alt="category" class="wb oc mg ng" />
+                        <img src="{% static 'src/assets/ecom-images/categories/category-03/image-02.jpg' %}" alt="category" class="wb oc mg ng" />
                         <div class="d h m wb oc xg yg vl">
                             <div class="pd">
                                 <span class="ra qb ui bj hj">
                     #Accessories
                   </span>
-                                <a href="filters.html" class="vi bj gj yl lp oq">
+                                <a href="{% url 'produtos' %}" class="vi bj gj yl lp oq">
                     Discover Our Accessories Collection
                   </a>
                             </div>
@@ -743,13 +744,13 @@
                     </div>
 
                     <div class="e na cc hl un xp">
-                        <img src="src/assets/ecom-images/categories/category-03/image-03.jpg" alt="category" class="wb oc mg ng" />
+                        <img src="{% static 'src/assets/ecom-images/categories/category-03/image-03.jpg' %}" alt="category" class="wb oc mg ng" />
                         <div class="d h m wb oc xg yg vl">
                             <div class="pd">
                                 <span class="ra qb ui bj hj">
                     #Office
                   </span>
-                                <a href="filters.html" class="vi bj gj yl lp oq">
+                                <a href="{% url 'produtos' %}" class="vi bj gj yl lp oq">
                     Make Your Workspace More Comfortable
                   </a>
                             </div>
@@ -788,7 +789,7 @@
                             <div class="da wb gd vg yk ql jm fo eq 2xl:ud-min-w-[430px]">
                                 <div class="se ve af nf wf">
                                     <div>
-                                        <img src="src/assets/ecom-images/products/product-carousel-05/image-01.jpg" alt="product" class="oc" />
+                                        <img src="{% static 'src/assets/ecom-images/products/product-carousel-05/image-01.jpg' %}" alt="product" class="oc" />
                                     </div>
                                     <div class="og">
                                         <a href="product-details.html" class="xa qb wi bj gj ik al jp mq">
@@ -881,7 +882,7 @@
                             <div class="da wb gd vg yk ql jm fo eq 2xl:ud-min-w-[430px]">
                                 <div class="se ve af nf wf">
                                     <div>
-                                        <img src="src/assets/ecom-images/products/product-carousel-05/image-02.jpg" alt="product" class="oc" />
+                                        <img src="{% static 'src/assets/ecom-images/products/product-carousel-05/image-02.jpg' %}" alt="product" class="oc" />
                                     </div>
                                     <div class="og">
                                         <a href="product-details.html" class="xa qb wi bj gj ik al jp mq">
@@ -974,7 +975,7 @@
                             <div class="da wb gd vg yk ql jm fo eq 2xl:ud-min-w-[430px]">
                                 <div class="se ve af nf wf">
                                     <div>
-                                        <img src="src/assets/ecom-images/products/product-carousel-05/image-03.jpg" alt="product" class="oc" />
+                                        <img src="{% static 'src/assets/ecom-images/products/product-carousel-05/image-03.jpg' %}" alt="product" class="oc" />
                                     </div>
                                     <div class="og">
                                         <a href="product-details.html" class="xa qb wi bj gj ik al jp mq">
@@ -1067,7 +1068,7 @@
                             <div class="da wb gd vg yk ql jm fo eq 2xl:ud-min-w-[430px]">
                                 <div class="se ve af nf wf">
                                     <div>
-                                        <img src="src/assets/ecom-images/products/product-carousel-05/image-02.jpg" alt="product" class="oc" />
+                                        <img src="{% static 'src/assets/ecom-images/products/product-carousel-05/image-02.jpg' %}" alt="product" class="oc" />
                                     </div>
                                     <div class="og">
                                         <a href="product-details.html" class="xa qb wi bj gj ik al jp mq">
@@ -1218,7 +1219,7 @@
                     <div class="oc ff nf vg im/2 om ao/3">
                         <div class="na bb">
                             <div class="oa se we">
-                                <img src="src/assets/ecom-images/products/products-grids-05/image-01.jpg" alt="product" class="oc" />
+                                <img src="{% static 'src/assets/ecom-images/products/products-grids-05/image-01.jpg' %}" alt="product" class="oc" />
                             </div>
                             <div>
                                 <span class="wa qb ui bj gj am ym 2xl:ud-text-xl">
@@ -1308,7 +1309,7 @@
                     <div class="oc ff nf vg im/2 ao/3 lo">
                         <div class="na bb">
                             <div class="oa se we">
-                                <img src="src/assets/ecom-images/products/products-grids-05/image-02.jpg" alt="product" class="oc" />
+                                <img src="{% static 'src/assets/ecom-images/products/products-grids-05/image-02.jpg' %}" alt="product" class="oc" />
                             </div>
                             <div>
                                 <span class="wa qb ui bj gj am ym 2xl:ud-text-xl">
@@ -1398,7 +1399,7 @@
                     <div class="oc ff nf vg im/2 om ao/3 mo">
                         <div class="na bb">
                             <div class="oa se we">
-                                <img src="src/assets/ecom-images/products/products-grids-05/image-03.jpg" alt="product" class="oc" />
+                                <img src="{% static 'src/assets/ecom-images/products/products-grids-05/image-03.jpg' %}" alt="product" class="oc" />
                             </div>
                             <div>
                                 <span class="wa qb ui bj gj am ym 2xl:ud-text-xl">
@@ -1488,7 +1489,7 @@
                     <div class="oc ff nf vg im/2 ao/3 no lo">
                         <div class="na bb">
                             <div class="oa se we">
-                                <img src="src/assets/ecom-images/products/products-grids-05/image-04.jpg" alt="product" class="oc" />
+                                <img src="{% static 'src/assets/ecom-images/products/products-grids-05/image-04.jpg' %}" alt="product" class="oc" />
                             </div>
                             <div>
                                 <span class="wa qb ui bj gj am ym 2xl:ud-text-xl">
@@ -1578,7 +1579,7 @@
                     <div class="oc ff nf vg im/2 pm om ao/3">
                         <div class="na bb">
                             <div class="oa se we">
-                                <img src="src/assets/ecom-images/products/products-grids-05/image-05.jpg" alt="product" class="oc" />
+                                <img src="{% static 'src/assets/ecom-images/products/products-grids-05/image-05.jpg' %}" alt="product" class="oc" />
                             </div>
                             <div>
                                 <span class="wa qb ui bj gj am ym 2xl:ud-text-xl">
@@ -1668,7 +1669,7 @@
                     <div class="oc nf vg im/2 ao/3">
                         <div class="na bb">
                             <div class="oa se we">
-                                <img src="src/assets/ecom-images/products/products-grids-05/image-06.jpg" alt="product" class="oc" />
+                                <img src="{% static 'src/assets/ecom-images/products/products-grids-05/image-06.jpg' %}" alt="product" class="oc" />
                             </div>
                             <div>
                                 <span class="wa qb ui bj gj am ym 2xl:ud-text-xl">
@@ -1871,7 +1872,7 @@
                                     </p>
                                     <div class="sb je">
                                         <div class="ta ec oc sd">
-                                            <img src="src/assets/images/testimonials/testimonial-04/image-01.png" alt="image" class="oc" />
+                                            <img src="{% static 'src/assets/images/testimonials/testimonial-04/image-01.png' %}" alt="image" class="oc" />
                                         </div>
                                         <div class="oc">
                                             <h5 class="sa xi bj lj">
@@ -1964,7 +1965,7 @@
                                     </p>
                                     <div class="sb je">
                                         <div class="ta ec oc sd">
-                                            <img src="src/assets/images/testimonials/testimonial-04/image-02.png" alt="image" class="oc" />
+                                            <img src="{% static 'src/assets/images/testimonials/testimonial-04/image-02.png' %}' alt="image" class="oc" />
                                         </div>
                                         <div class="oc">
                                             <h5 class="sa xi bj lj">
@@ -2057,7 +2058,7 @@
                                     </p>
                                     <div class="sb je">
                                         <div class="ta ec oc sd">
-                                            <img src="src/assets/images/testimonials/testimonial-04/image-03.png" alt="image" class="oc" />
+                                            <img src="{% static 'src/assets/images/testimonials/testimonial-04/image-03.png' %}" alt="image" class="oc" />
                                         </div>
                                         <div class="oc">
                                             <h5 class="sa xi bj lj">
@@ -2150,7 +2151,7 @@
                                     </p>
                                     <div class="sb je">
                                         <div class="ta ec oc sd">
-                                            <img src="src/assets/images/testimonials/testimonial-04/image-01.png" alt="image" class="oc" />
+                                            <img src="{% static 'src/assets/images/testimonials/testimonial-04/image-01.png' %}" alt="image" class="oc" />
                                         </div>
                                         <div class="oc">
                                             <h5 class="sa xi bj lj">
@@ -2221,7 +2222,7 @@
                 <div class="oc vg im/2 ao/3">
                     <div class="da na td">
                         <div class="ma se xe">
-                            <img src="src/assets/images/blogs/blog-04/image-01.jpg" alt="image" class="oc" />
+                            <img src="{% static 'src/assets/images/blogs/blog-04/image-01.jpg' %}" alt="image" class="oc" />
                         </div>
                         <div>
                             <span class="ra rb ui bj ij">
@@ -2299,7 +2300,7 @@
                 <div class="oc vg im/2 ao/3">
                     <div class="da na td">
                         <div class="ma se xe">
-                            <img src="src/assets/images/blogs/blog-04/image-02.jpg" alt="image" class="oc" />
+                            <img src="{% static 'src/assets/images/blogs/blog-04/image-02.jpg' %}" alt="image" class="oc" />
                         </div>
                         <div>
                             <span class="ra rb ui bj ij">
@@ -2682,9 +2683,9 @@
                 <div class="ea sb he">
                     <div class="oc vg im/2 xn/12 _p/12">
                         <div class="pb xd">
-                            <a href="index.html" class="ma rb">
+                            <a href="{% url 'index' %}" class="ma rb">
               <img
-                src="src/assets/ecom-images/logo/logo-white.svg"
+                src="{% static 'src/assets/ecom-images/logo/logo-white.svg' %}"
                 alt="logo"
                 class="od"
               />
@@ -3004,7 +3005,7 @@
 
                     <div class="oc vg im/2 yn/12 zp/3">
                         <div class="da oa in">
-                            <img src="src/assets/ecom-images/footers/footer-03/payment.svg" alt="payment" class="da od" />
+                            <img src="{% static 'src/assets/ecom-images/footers/footer-03/payment.svg' %}" alt="payment" class="da od" />
                         </div>
                     </div>
 
