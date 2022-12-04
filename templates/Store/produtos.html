@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8" />
@@ -80,7 +80,7 @@
                                     <div :class="categories ? 'qb' : 'ub' " class="e t m y ve wf bk dn en do ko oo yo">
                                         <span class="d u v z ub zb rc be _e cf lf mf nf wf on"></span>
                                         <div class="lh so">
-                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                       Arts & Crafts
                     </a>
                                         </div>
@@ -114,19 +114,19 @@
                                                             <h3 class="ra ui bj gj">
                                                                 New Arrivals
                                                             </h3>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Dresses
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Jackets
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Sweatshirts
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Tops & Tees
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Party Dresses
                             </a>
                                                         </div>
@@ -136,19 +136,19 @@
                                                             <h3 class="ra ui bj gj">
                                                                 New Arrivals
                                                             </h3>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Dresses
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Jackets
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Sweatshirts
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Tops & Tees
                             </a>
-                                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                               Party Dresses
                             </a>
                                                         </div>
@@ -166,12 +166,12 @@
                                             </div>
                                         </div>
                                         <div class="lh so">
-                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                       Bags & Shoes
                     </a>
                                         </div>
                                         <div class="lh so">
-                                            <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                            <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                       Jewelry & Watch
                     </a>
                                         </div>
@@ -183,12 +183,12 @@
                 </a>
                                 </li>
                                 <li>
-                                    <a href="filters.html" class="sb me mh ui dj lj ik hn qn ap">
+                                    <a href="{% url 'produtos' %}" class="sb me mh ui dj lj ik hn qn ap">
                   Shop
                 </a>
                                 </li>
                                 <li>
-                                    <a href="filters.html" class="sb me mh ui dj lj ik hn qn ap">
+                                    <a href="{% url 'produtos' %}" class="sb me mh ui dj lj ik hn qn ap">
                   Products
                 </a>
                                 </li>
@@ -221,31 +221,31 @@
                                         <a href="{% url 'index' %}" class="qb xe mh xi dj hj ik">
                     Home
                   </a>
-                                        <a href="checkout.html" class="qb xe mh xi dj hj ik">
+                                        <a href="{% url 'carrinho' %}" class="qb xe mh xi dj hj ik">
                     Checkout
                   </a>
-                                        <a href="filters.html" class="qb xe mh xi dj hj ik">
+                                        <a href="{% url 'produtos' %}" class="qb xe mh xi dj hj ik">
                     Filters
                   </a>
                                         <a href="order-summary.html" class="qb xe mh xi dj hj ik">
                     Order Summary
                   </a>
-                                        <a href="product-details.html" class="qb xe mh xi dj hj ik">
+                                        <a href="{% url 'descricao-produto' %}" class="qb xe mh xi dj hj ik">
                     Product details
                   </a>
                                         <a href="shopping-cart.html" class="qb xe mh xi dj hj ik">
                     Shopping Cart
                   </a>
-                                        <a href="wishlist.html" class="qb xe mh xi dj hj ik">
+                                        <a href="{% url 'wishlist' %}" class="qb xe mh xi dj hj ik">
                     Wishlist
                   </a>
-                                        <a href="support.html" class="qb xe mh xi dj hj ik">
+                                        <a href="{% url 'contato' %}" class="qb xe mh xi dj hj ik">
                     Support
                   </a>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="support.html" class="sb me mh ui dj lj ik hn rn ap up">
+                                    <a href="{% url 'contato' %}" class="sb me mh ui dj lj ik hn rn ap up">
                   Contact
                 </a>
                                 </li>
@@ -372,7 +372,7 @@
                                     </div>
 
                                     <div>
-                                        <a href="wishlist.html" class="sb oc je le we yf gh ah si ui ej jj hk">
+                                        <a href="{% url 'wishlist' %}" class="sb oc je le we yf gh ah si ui ej jj hk">
                     Go to Wishlist
                   </a>
                                     </div>
@@ -420,7 +420,7 @@
                                                     <img src="{% static 'src/assets/ecom-images/checkout/checkout-02/image-02.jpg' %}" alt="product image" class="oc" />
                                                 </div>
                                                 <div>
-                                                    <a href="product-details.html" class="xi dj gj ik">
+                                                    <a href="{% url 'descricao-produto' %}" class="xi dj gj ik">
                           Circular Sienna
                         </a>
                                                     <p class="ue yi dj hj">
@@ -440,7 +440,7 @@
                                                     <img src="{% static 'src/assets/ecom-images/checkout/checkout-02/image-03.jpg' %}" alt="product image" class="oc" />
                                                 </div>
                                                 <div>
-                                                    <a href="product-details.html" class="xi dj gj ik">
+                                                    <a href="{% url 'descricao-produto' %}" class="xi dj gj ik">
                           Black T-shirt
                         </a>
                                                     <p class="ue yi dj hj">
@@ -507,7 +507,7 @@
                                     </div>
 
                                     <div>
-                                        <a href="checkout.html" class="sb oc je le we yf gh ah si ui ej jj hk">
+                                        <a href="{% url 'carrinho' %}" class="sb oc je le we yf gh ah si ui ej jj hk">
                     Place Order
                   </a>
                                     </div>
@@ -1038,7 +1038,7 @@
                                     <img src="{% static 'src/assets/ecom-images/products/product-carousel-05/image-01.jpg' %}" alt="product" class="oc" />
                                 </div>
                                 <div class="og">
-                                    <a href="product-details.html" class="xa qb wi bj gj ik al jp mq">
+                                    <a href="{% url 'descricao-produto' %}" class="xa qb wi bj gj ik al jp mq">
                       Apple Watch Series 7
                     </a>
                                     <p class="ui dj hj">
@@ -1131,7 +1131,7 @@
                                     <img src="{% static 'src/assets/ecom-images/products/product-carousel-05/image-02.jpg' %}" alt="product" class="oc" />
                                 </div>
                                 <div class="og">
-                                    <a href="product-details.html" class="xa qb wi bj gj ik al jp mq">
+                                    <a href="{% url 'descricao-produto' %}" class="xa qb wi bj gj ik al jp mq">
                       iPhone 13 Pro Max
                     </a>
                                     <p class="ui dj hj">
@@ -1224,7 +1224,7 @@
                                     <img src="{% static 'src/assets/ecom-images/products/product-carousel-05/image-03.jpg' %}" alt="product" class="oc" />
                                 </div>
                                 <div class="og">
-                                    <a href="product-details.html" class="xa qb wi bj gj ik al jp mq">
+                                    <a href="{% url 'descricao-produto' %}" class="xa qb wi bj gj ik al jp mq">
                       Macbook Pro 13” M1 2020
                     </a>
                                     <p class="ui dj hj">
@@ -1317,7 +1317,7 @@
                                     <img src="{% static 'src/assets/ecom-images/products/product-carousel-05/image-02.jpg' %}" alt="product" class="oc" />
                                 </div>
                                 <div class="og">
-                                    <a href="product-details.html" class="xa qb wi bj gj ik al jp mq">
+                                    <a href="{% url 'descricao-produto' %}" class="xa qb wi bj gj ik al jp mq">
                       iPhone 13 Pro Max
                     </a>
                                     <p class="ui dj hj">

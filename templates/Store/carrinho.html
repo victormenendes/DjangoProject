@@ -1,20 +1,19 @@
 {% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contato</title>
-    <link rel="icon" href="favicon.png">
+    <title>Carrinho</title>
     <link href="{% static 'tailwind.css' %}" rel="stylesheet">
     <script src="{% static 'bundle.js' %}" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- ====== Navbar Section Start -->
-
     <header x-data="
         {
           navbarOpen: false,
@@ -570,7 +569,7 @@
                         </li>
 
                         <li class="ui bj ij">
-                            Support
+                            Checkout
                         </li>
                     </ul>
                 </div>
@@ -579,178 +578,311 @@
     </section>
     <!-- ====== Breadcrumbs Section End -->
 
-    <!-- ====== Contact Section Start -->
-    <section>
-        <div class="wf ai ii ep fp">
-            <div class="a da">
-                <div class="ea sb he">
-                    <div class="oc vg im/3">
-                        <div class="na si">
-                            <div class="da oa sb kc bd je le ye fg ij jl ol">
-                                <svg width="42" height="29" viewBox="0 0 42 29" class="kg">
-                    <path
-                      d="M38.0455 0H3.95455C1.77273 0 0 1.78251 0 3.97636V25.0236C0 27.2175 1.77273 29 3.95455 29H38.0455C40.2273 29 42 27.2175 42 25.0236V3.97636C42 1.78251 40.2273 0 38.0455 0ZM38.0455 2.39953C38.3864 2.39953 38.6591 2.46809 38.9318 2.67376L21.9545 13.026C21.3409 13.3688 20.6591 13.3688 20.0455 13.026L3.06818 2.67376C3.34091 2.53664 3.61364 2.39953 3.95455 2.39953H38.0455ZM38.0455 26.5319H3.95455C3.13636 26.5319 2.38636 25.8463 2.38636 24.9551V5.07329L18.75 15.0827C19.4318 15.4941 20.1818 15.6998 20.9318 15.6998C21.6818 15.6998 22.4318 15.4941 23.1136 15.0827L39.4773 5.07329V24.9551C39.6136 25.8463 38.8636 26.5319 38.0455 26.5319Z"
-                    />
-                  </svg>
-                            </div>
-                            <div class="si">
-                                <h4 class="ra wi bj gj">
-                                    Email Address
-                                </h4>
-                                <p class="ui hj">
-                                    info@example.com
-                                </p>
-                                <p class="ui hj">
-                                    support@example.com
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="oc vg im/3">
-                        <div class="na si">
-                            <div class="da oa sb kc bd je le ye fg ij jl ol">
-                                <svg width="37" height="40" viewBox="0 0 37 40" class="kg">
-                    <path
-                      d="M34.7508 23.0523C34.6209 21.5588 33.3871 20.5198 31.8936 20.5198H4.23067C2.73714 20.5198 1.56828 21.6237 1.37347 23.0523L0.00980639 36.6889C-0.05513 37.4682 0.204616 38.3124 0.724107 38.8968C1.2436 39.4812 2.02284 39.8059 2.86701 39.8059H33.3222C34.1014 39.8059 34.8807 39.4812 35.4651 38.8968C35.9846 38.3124 36.2443 37.5331 36.1794 36.6889L34.7508 23.0523ZM33.7118 37.4032C33.6469 37.4682 33.517 37.5981 33.2573 37.5981H2.86701C2.6722 37.5981 2.47739 37.4682 2.41245 37.4032C2.34752 37.3383 2.21764 37.2084 2.28258 36.9487L3.64625 23.2471C3.64625 22.9224 3.90599 22.7276 4.23067 22.7276H31.9585C32.2832 22.7276 32.478 22.9224 32.543 23.2471L33.9066 36.9487C33.8417 37.1435 33.7767 37.3383 33.7118 37.4032Z"
-                    />
-                    <path
-                      d="M18.0631 25.585C15.5306 25.585 13.5176 27.598 13.5176 30.1305C13.5176 32.663 15.5306 34.6761 18.0631 34.6761C20.5956 34.6761 22.6087 32.663 22.6087 30.1305C22.6087 27.598 20.5956 25.585 18.0631 25.585ZM18.0631 32.4033C16.8293 32.4033 15.7904 31.3643 15.7904 30.1305C15.7904 28.8967 16.8293 27.8577 18.0631 27.8577C19.2969 27.8577 20.3359 28.8967 20.3359 30.1305C20.3359 31.3643 19.2969 32.4033 18.0631 32.4033Z"
-                    />
-                    <path
-                      d="M1.56884 11.8184C1.69872 14.6756 4.23124 15.8445 5.52996 15.8445H10.0755C10.1405 15.8445 10.1404 15.8445 10.1404 15.8445C12.0885 15.7146 14.0366 14.4159 14.0366 11.8184V10.26C16.1795 10.26 21.1147 10.26 23.2576 10.26V11.8184C23.2576 14.4159 25.2057 15.7146 27.1538 15.8445H27.2187H31.6993C32.9981 15.8445 35.5306 14.6756 35.6605 11.8184C35.6605 11.6236 35.6605 10.9093 35.6605 10.26C35.6605 9.74046 35.6605 9.28591 35.6605 9.22097C35.6605 9.15604 35.6605 9.0911 35.6605 9.0911C35.4657 7.27288 34.8163 5.77934 33.7124 4.61049L33.6474 4.54555C32.024 3.05201 30.0759 2.20784 28.5824 1.68835C24.2317 0 18.777 0 18.5172 0C14.686 0.0649364 12.2184 0.389618 8.51704 1.68835C7.08844 2.1429 5.14035 2.98708 3.51694 4.48061L3.452 4.54555C2.34808 5.7144 1.69872 7.20794 1.50391 9.02616C1.50391 9.0911 1.50391 9.15604 1.50391 9.15604C1.50391 9.28591 1.50391 9.67553 1.50391 10.195C1.56884 10.7794 1.56884 11.5587 1.56884 11.8184ZM5.07541 6.10402C6.37414 4.93517 7.99755 4.22087 9.36121 3.70138C12.7379 2.46758 14.9457 2.20784 18.6471 2.1429C18.9069 2.1429 23.9719 2.20784 27.8681 3.70138C29.2318 4.22087 30.8552 4.87023 32.1539 6.10402C32.8682 6.88326 33.3228 7.92224 33.4526 9.15604C33.4526 9.35084 33.4526 9.67553 33.4526 10.195C33.4526 10.8444 33.4526 11.5587 33.4526 11.7535C33.3877 13.247 31.9591 13.5717 31.7643 13.5717H27.2837C26.6343 13.5068 25.5953 13.247 25.5953 11.8184V9.15604C25.5953 8.63654 25.2706 8.24693 24.8161 8.05212C24.4265 7.92224 13.0626 7.92224 12.673 8.05212C12.2184 8.18199 11.8937 8.63654 11.8937 9.15604V11.8184C11.8937 13.247 10.8547 13.5068 10.2054 13.5717H5.72477C5.52996 13.5717 4.10136 13.247 4.03643 11.7535C4.03643 11.5587 4.03643 10.8444 4.03643 10.195C4.03643 9.67553 4.03643 9.41578 4.03643 9.22097C3.90655 7.92224 4.36111 6.88326 5.07541 6.10402Z"
-                    />
-                  </svg>
-                            </div>
-                            <div class="si">
-                                <h4 class="ra wi bj gj">
-                                    Phone Number
-                                </h4>
-                                <p class="ui hj">
-                                    +88 (800) 123 4567
-                                </p>
-                                <p class="ui hj">
-                                    +99 094 5445 433
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="oc vg im/3">
-                        <div class="na si">
-                            <div class="da oa sb kc bd je le ye fg ij jl ol">
-                                <svg width="47" height="47" viewBox="0 0 47 47" class="kg">
-                    <path
-                      d="M23.4996 0.95459C13.2918 0.95459 4.91992 9.03272 4.91992 18.8733C4.91992 26.7312 16.1559 39.7296 21.0027 45.0171C21.6637 45.7515 22.5449 46.1186 23.4996 46.1186C24.4543 46.1186 25.3355 45.7515 25.9965 45.0171C30.8434 39.803 42.0793 26.7312 42.0793 18.8733C42.0793 8.95928 33.7074 0.95459 23.4996 0.95459ZM24.0871 43.2546C23.7199 43.6218 23.2059 43.6218 22.9121 43.2546C19.3137 39.3624 7.49023 25.9968 7.49023 18.8733C7.49023 10.3546 14.6871 3.5249 23.4996 3.5249C32.3121 3.5249 39.509 10.428 39.509 18.8733C39.509 25.9968 27.6855 39.289 24.0871 43.2546Z"
-                    />
-                    <path
-                      d="M23.4996 11.5295C19.1668 11.5295 15.5684 15.0545 15.5684 19.4608C15.5684 23.7936 19.0934 27.392 23.4996 27.392C27.9059 27.392 31.4309 23.867 31.4309 19.4608C31.4309 15.0545 27.8324 11.5295 23.4996 11.5295ZM23.4996 24.7483C20.5621 24.7483 18.1387 22.3249 18.1387 19.3874C18.1387 16.4499 20.5621 14.0264 23.4996 14.0264C26.4371 14.0264 28.8605 16.4499 28.8605 19.3874C28.8605 22.3249 26.4371 24.7483 23.4996 24.7483Z"
-                    />
-                  </svg>
-                            </div>
-                            <div class="si">
-                                <h4 class="ra wi bj gj">
-                                    Our Address
-                                </h4>
-                                <p class="ui hj">
-                                    82 12th Street, Office 14,
-                                </p>
-                                <p class="ui hj">Edinburgh, UK</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="fg hh uo">
-            <div class="a da">
-                <div class="ea sb he">
-                    <div class="oc vg">
-                        <div class="da cb qd si ln">
-                            <span class="wa qb wi bj ij">
-                  Contact Us
-                </span>
-                            <h2 class="xa _i cj lj _l xm">
-                                How Can We Help You?
-                            </h2>
-                            <p class="ui hj">
-                                There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <form>
-                        <div class="ea sb he le">
-                            <div class="oc vg im/2">
-                                <div class="nb nn">
-                                    <label class="ra qb ui dj gj fm">
-                      Your Name <span class="oj">*</span>
-                    </label>
-                                    <input type="text" class="oc xe af tf wf zg sh ui fj hj _j lk ok tm um" />
+    <!-- ====== Checkout Section Start -->
+    <section class="wf vh wh">
+        <div class="a da">
+            <div class="ea sb he">
+                <div class="oc vg vn/12 yp/12">
+                    <div class="la in">
+                        <h3 class="ma vi cj gj yl">
+                            Payment Information
+                        </h3>
+
+                        <div class="na se ve af nf xf xg yg vl">
+                            <h4 class="ma wi bj gj">
+                                Personal Details
+                            </h4>
+
+                            <form class="na ff nf xh">
+                                <div class="fa sb he">
+                                    <div class="oc wg im/2">
+                                        <div class="oa">
+                                            <label for="" class="pa qb ui dj hj">
+                          Full Name
+                        </label>
+                                            <input type="text" placeholder="Mark Litho" class="oc ve af of zg _g dj hj _j ak lk pk qk rk" />
+                                        </div>
+                                    </div>
+                                    <div class="oc wg im/2">
+                                        <div class="oa">
+                                            <label for="" class="pa qb ui dj hj">
+                          Phone Number
+                        </label>
+                                            <input type="text" placeholder="883-992-145" class="oc ve af of zg _g dj hj _j ak lk pk qk rk" />
+                                        </div>
+                                    </div>
+                                    <div class="oc wg im/2">
+                                        <div class="oa">
+                                            <label for="" class="pa qb ui dj hj">
+                          Email
+                        </label>
+                                            <input type="email" placeholder="yourmail@gmail.com" class="oc ve af of zg _g dj hj _j ak lk pk qk rk" />
+                                        </div>
+                                    </div>
+                                    <div class="oc wg im/2">
+                                        <div class="oa">
+                                            <label for="" class="pa qb ui dj hj">
+                          Address
+                        </label>
+                                            <input type="text" placeholder="2707 Davis Anenue" class="oc ve af of zg _g dj hj _j ak lk pk qk rk" />
+                                        </div>
+                                    </div>
+                                    <div class="oc wg im/3">
+                                        <div class="oa">
+                                            <label for="" class="pa qb ui dj hj">
+                          Country
+                        </label>
+                                            <input type="text" placeholder="2707 Davis Anenue" class="oc ve af of zg _g dj hj _j ak lk pk qk rk" />
+                                        </div>
+                                    </div>
+                                    <div class="oc wg im/3">
+                                        <div class="oa">
+                                            <label for="" class="pa qb ui dj hj">
+                          City
+                        </label>
+                                            <input type="text" placeholder="New York" class="oc ve af of zg _g dj hj _j ak lk pk qk rk" />
+                                        </div>
+                                    </div>
+                                    <div class="oc wg im/3">
+                                        <div class="oa">
+                                            <label for="" class="pa qb ui dj hj">
+                          Post Code
+                        </label>
+                                            <input type="text" placeholder="94612" class="oc ve af of zg _g dj hj _j ak lk pk qk rk" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <h4 class="qa wi bj gj">
+                                Your Saved Cards
+                            </h4>
+
+                            <div class="fa sb he">
+                                <div class="pc/2 wg">
+                                    <div>
+                                        <img src="{% static 'src/assets/ecom-images/checkout/checkout-04/card-01.svg' %}" alt="card" class="oc" />
+                                    </div>
+                                </div>
+                                <div class="pc/2 wg">
+                                    <div>
+                                        <img src="{% static 'src/assets/ecom-images/checkout/checkout-04/card-02.svg' %}" alt="card" class="oc" />
+                                    </div>
                                 </div>
                             </div>
-                            <div class="oc vg im/2">
-                                <div class="nb nn">
-                                    <label class="ra qb ui dj gj fm">
-                      Your Email <span class="oj">*</span>
-                    </label>
-                                    <input type="email" class="oc xe af tf wf zg sh ui fj hj _j lk ok tm um" />
-                                </div>
-                            </div>
-                            <div class="oc vg">
-                                <div class="nb nn">
-                                    <label class="ra qb ui dj gj fm">
-                      Your Message <span class="oj">*</span>
-                    </label>
-                                    <textarea rows="4" class="oc ee xe af tf wf zg sh ui fj hj _j lk ok tm um"></textarea>
-                                </div>
-                            </div>
-                            <div class="oc vg">
-                                <label for="checkboxLabelTwo" class="la sb ce je ui hj gm">
-                    <div class="relative">
-                      <input
-                        type="checkbox"
-                        id="checkboxLabelTwo"
-                        class="b"
-                      />
-                      <div
-                        class="box ta sb yb qc je le xe af uf"
-                      >
-                        <span class="uj">
-                          <svg
-                            width="11"
-                            height="8"
-                            viewBox="0 0 11 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10.0915 0.951972L10.0867 0.946075L10.0813 0.940568C9.90076 0.753564 9.61034 0.753146 9.42927 0.939309L4.16201 6.22962L1.58507 3.63469C1.40401 3.44841 1.11351 3.44879 0.932892 3.63584C0.755703 3.81933 0.755703 4.10875 0.932892 4.29224L0.932878 4.29225L0.934851 4.29424L3.58046 6.95832C3.73676 7.11955 3.94983 7.2 4.1473 7.2C4.36196 7.2 4.55963 7.11773 4.71406 6.9584L10.0468 1.60234C10.2436 1.4199 10.2421 1.1339 10.0915 0.951972ZM4.2327 6.30081L4.2317 6.2998C4.23206 6.30015 4.23237 6.30049 4.23269 6.30082L4.2327 6.30081Z"
-                              fill="#3056D3"
-                              stroke="#3056D3"
-                              stroke-width="0.4"
-                            />
-                          </svg>
+                        </div>
+
+                        <h3 class="ma vi cj gj yl">
+                            Shipping Details
+                        </h3>
+
+                        <div class="rq ve af nf xf xg yg vl">
+                            <h4 class="qa wi bj gj">
+                                Shipping Address
+                            </h4>
+
+                            <div class="fa ma sb he">
+                                <div class="oc wg im/2 zp/2">
+                                    <div class="ra">
+                                        <input type="radio" name="shippingAddress" id="shippingAddress1" class="shipping b" />
+                                        <label for="shippingAddress1" class="qb ce se we af pf wf ug yg wl sm qo hq">
+                        <span
+                          class="title sa qb xi bj gj zl wm ip"
+                        >
+                          Same as Personal
                         </span>
-                      </div>
-                    </div>
-                    I agree that my submitted data is being collected and
-                    stored.
-                  </label>
+                        <span
+                          class="qb xi dj hj"
+                        >
+                          New York, USA <br />
+                          2707 Davis Anenue
+                        </span>
+                      </label>
+                                    </div>
+                                </div>
+                                <div class="oc wg im/2 zp/2">
+                                    <div class="ra">
+                                        <input type="radio" name="shippingAddress" id="shippingAddress2" class="shipping b" />
+                                        <label for="shippingAddress2" class="qb ce se we af pf wf ug yg wl sm qo hq">
+                        <span
+                          class="title sa qb xi bj gj zl wm ip"
+                        >
+                          Register Now
+                        </span>
+                        <span
+                          class="qb xi dj hj"
+                        >
+                          Create an account now to have multiple address.
+                        </span>
+                      </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="oc vg pl/12 yn/12">
-                                <div class="si">
-                                    <button type="submit" class="qb oc xe yf th ah si ui bj jj ak hk">
-                      Send Message
-                    </button>
+
+                            <h4 class="qa wi bj gj">
+                                Shipping Method
+                            </h4>
+
+                            <div class="fa sb he">
+                                <div class="oc wg im/2 wn zp/2">
+                                    <div class="ra">
+                                        <input type="radio" name="shipping" id="shipping1" class="shipping b" />
+                                        <label for="shipping1" class="sb ce je se we af pf wf ug yg wl sm qo hq">
+                        <div
+                          class="ta oc kd rl"
+                        >
+                          <img
+                            src="{% static 'src/assets/ecom-images/checkout/checkout-04/fedex.svg' %}"
+                            alt="fedex"
+                          />
+                        </div>
+                        <div class="gf nf yh">
+                          <span
+                            class="sa qb xi bj gj zl wm ip"
+                          >
+                            FedEx Fast Delivery
+                          </span>
+                          <span
+                            class="qb xi dj hj"
+                          >
+                            Delivery: Friday, 25
+                          </span>
+                          <span
+                            class="qb xi bj hj"
+                          >
+                            $10.99
+                          </span>
+                        </div>
+                      </label>
+                                    </div>
+                                </div>
+                                <div class="oc wg im/2 wn zp/2">
+                                    <div class="ra">
+                                        <input type="radio" name="shipping" id="shipping2" class="shipping b" />
+                                        <label for="shipping2" class="sb ce je se we af pf wf ug yg wl sm qo hq">
+                        <div
+                          class="ta oc kd rl"
+                        >
+                          <img
+                            src="{% static 'src/assets/ecom-images/checkout/checkout-04/dhl-express.svg' %}"
+                            alt="fedex"
+                          />
+                        </div>
+                        <div class="gf nf yh">
+                          <span
+                            class="sa qb xi bj gj zl wm ip"
+                          >
+                            DHL Fast Delivery
+                          </span>
+                          <span
+                            class="qb xi dj hj"
+                          >
+                            Delivery: Sunday, 27
+                          </span>
+                          <span
+                            class="qb xi bj hj"
+                          >
+                            $10.99
+                          </span>
+                        </div>
+                      </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                </div>
+
+                <div class="oc vg xn/12 _p/12">
+                    <div>
+                        <h3 class="ma vi cj gj yl">
+                            Payment Information
+                        </h3>
+
+                        <div class="na se ve af nf xf xg yg vl ro 2xl:ud-px-10">
+                            <div class="ua sb je">
+                                <div class="va vb oc ld se ve el sl">
+                                    <img src="{% static 'src/assets/ecom-images/checkout/checkout-04/product-01.jpg' %}" alt="product" class="wb oc mg ng" />
+                                </div>
+                                <div class="oc">
+                                    <p class="sa ui dj gj">
+                                        Trendy Ladies Pants
+                                    </p>
+                                    <p class="xi dj hj">
+                                        $59.99
+                                    </p>
+                                    <p class="xi dj hj">
+                                        Quantity: <span>1</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="ua sb je">
+                                <div class="va vb oc ld se ve el sl">
+                                    <img src="{% static 'src/assets/ecom-images/checkout/checkout-04/product-02.jpg' %}" alt="product" class="wb oc mg ng" />
+                                </div>
+                                <div class="oc">
+                                    <p class="sa ui dj gj">
+                                        Men's Sendo T-shirt
+                                    </p>
+                                    <p class="xi dj hj">
+                                        $80.99
+                                    </p>
+                                    <p class="xi dj hj">
+                                        Quantity: <span>2</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="hf nf zh">
+                                <p class="wa sb je me ui gj">
+                                    <span class="dj">Subtotal</span>
+                                    <span class="bj"> $140.98 </span>
+                                </p>
+                                <p class="wa sb je me ui gj">
+                                    <span class="dj">Shipping Cost</span>
+                                    <span class="bj"> $10.99 </span>
+                                </p>
+                                <p class="xa sb je me ui gj">
+                                    <span class="dj">Discount</span>
+                                    <span class="bj"> $5.00 </span>
+                                </p>
+                            </div>
+
+                            <div class="hf nf _h">
+                                <p class="xa sb je me ui gj">
+                                    <span class="dj">Total Amount</span>
+                                    <span class="bj"> $124.99 </span>
+                                </p>
+                            </div>
+                            <button class="sb oc je le we yf zg ah si ui bj jj hk">
+                  Get Started
+                </button>
+                        </div>
+
+                        <div class="na se ve af nf xf xg yg vl ro 2xl:ud-px-10">
+                            <div class="qa ff nf xh">
+                                <h3 class="wa wi bj gj">
+                                    Coupon Code
+                                </h3>
+                                <p class="xi dj hj">
+                                    Enter code to get discount instantly
+                                </p>
+                            </div>
+
+                            <form class="e">
+                                <input type="text" placeholder="Coupon code" class="oc ve af of bh yg dj hj rj _j ak lk pk qk rk" />
+                                <button class="d f g/2 ra xb ae/2 xe yf _g xi dj jj ak hk">
+                    Apply
+                  </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ====== Contact Section End -->
+    <!-- ====== Checkout Section End -->
 
     <!-- ====== eCommerce Footer Section Start -->
     <footer class="bg">

@@ -1,20 +1,18 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contato</title>
-    <link rel="icon" href="favicon.png">
+    <title>Shopper eCommerce Template by TailGrids</title>
     <link href="{% static 'tailwind.css' %}" rel="stylesheet">
     <script src="{% static 'bundle.js' %}" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- ====== Navbar Section Start -->
-
     <header x-data="
         {
           navbarOpen: false,
@@ -570,7 +568,7 @@
                         </li>
 
                         <li class="ui bj ij">
-                            Support
+                            Product Details
                         </li>
                     </ul>
                 </div>
@@ -579,178 +577,754 @@
     </section>
     <!-- ====== Breadcrumbs Section End -->
 
-    <!-- ====== Contact Section Start -->
-    <section>
-        <div class="wf ai ii ep fp">
-            <div class="a da">
+    <!-- ====== Products Details Start -->
+    <section x-data="
+        {
+          productOne: true,
+          productTwo: false,
+          productThree: false,
+          productFour: false,
+          modalOpen: false
+        }
+      " class="wf vh">
+        <div class="a da">
+            <div class="se ze af nf wf sg">
                 <div class="ea sb he">
-                    <div class="oc vg im/3">
-                        <div class="na si">
-                            <div class="da oa sb kc bd je le ye fg ij jl ol">
-                                <svg width="42" height="29" viewBox="0 0 42 29" class="kg">
-                    <path
-                      d="M38.0455 0H3.95455C1.77273 0 0 1.78251 0 3.97636V25.0236C0 27.2175 1.77273 29 3.95455 29H38.0455C40.2273 29 42 27.2175 42 25.0236V3.97636C42 1.78251 40.2273 0 38.0455 0ZM38.0455 2.39953C38.3864 2.39953 38.6591 2.46809 38.9318 2.67376L21.9545 13.026C21.3409 13.3688 20.6591 13.3688 20.0455 13.026L3.06818 2.67376C3.34091 2.53664 3.61364 2.39953 3.95455 2.39953H38.0455ZM38.0455 26.5319H3.95455C3.13636 26.5319 2.38636 25.8463 2.38636 24.9551V5.07329L18.75 15.0827C19.4318 15.4941 20.1818 15.6998 20.9318 15.6998C21.6818 15.6998 22.4318 15.4941 23.1136 15.0827L39.4773 5.07329V24.9551C39.6136 25.8463 38.8636 26.5319 38.0455 26.5319Z"
-                    />
-                  </svg>
-                            </div>
-                            <div class="si">
-                                <h4 class="ra wi bj gj">
-                                    Email Address
-                                </h4>
-                                <p class="ui hj">
-                                    info@example.com
-                                </p>
-                                <p class="ui hj">
-                                    support@example.com
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="oc vg im/3">
-                        <div class="na si">
-                            <div class="da oa sb kc bd je le ye fg ij jl ol">
-                                <svg width="37" height="40" viewBox="0 0 37 40" class="kg">
-                    <path
-                      d="M34.7508 23.0523C34.6209 21.5588 33.3871 20.5198 31.8936 20.5198H4.23067C2.73714 20.5198 1.56828 21.6237 1.37347 23.0523L0.00980639 36.6889C-0.05513 37.4682 0.204616 38.3124 0.724107 38.8968C1.2436 39.4812 2.02284 39.8059 2.86701 39.8059H33.3222C34.1014 39.8059 34.8807 39.4812 35.4651 38.8968C35.9846 38.3124 36.2443 37.5331 36.1794 36.6889L34.7508 23.0523ZM33.7118 37.4032C33.6469 37.4682 33.517 37.5981 33.2573 37.5981H2.86701C2.6722 37.5981 2.47739 37.4682 2.41245 37.4032C2.34752 37.3383 2.21764 37.2084 2.28258 36.9487L3.64625 23.2471C3.64625 22.9224 3.90599 22.7276 4.23067 22.7276H31.9585C32.2832 22.7276 32.478 22.9224 32.543 23.2471L33.9066 36.9487C33.8417 37.1435 33.7767 37.3383 33.7118 37.4032Z"
-                    />
-                    <path
-                      d="M18.0631 25.585C15.5306 25.585 13.5176 27.598 13.5176 30.1305C13.5176 32.663 15.5306 34.6761 18.0631 34.6761C20.5956 34.6761 22.6087 32.663 22.6087 30.1305C22.6087 27.598 20.5956 25.585 18.0631 25.585ZM18.0631 32.4033C16.8293 32.4033 15.7904 31.3643 15.7904 30.1305C15.7904 28.8967 16.8293 27.8577 18.0631 27.8577C19.2969 27.8577 20.3359 28.8967 20.3359 30.1305C20.3359 31.3643 19.2969 32.4033 18.0631 32.4033Z"
-                    />
-                    <path
-                      d="M1.56884 11.8184C1.69872 14.6756 4.23124 15.8445 5.52996 15.8445H10.0755C10.1405 15.8445 10.1404 15.8445 10.1404 15.8445C12.0885 15.7146 14.0366 14.4159 14.0366 11.8184V10.26C16.1795 10.26 21.1147 10.26 23.2576 10.26V11.8184C23.2576 14.4159 25.2057 15.7146 27.1538 15.8445H27.2187H31.6993C32.9981 15.8445 35.5306 14.6756 35.6605 11.8184C35.6605 11.6236 35.6605 10.9093 35.6605 10.26C35.6605 9.74046 35.6605 9.28591 35.6605 9.22097C35.6605 9.15604 35.6605 9.0911 35.6605 9.0911C35.4657 7.27288 34.8163 5.77934 33.7124 4.61049L33.6474 4.54555C32.024 3.05201 30.0759 2.20784 28.5824 1.68835C24.2317 0 18.777 0 18.5172 0C14.686 0.0649364 12.2184 0.389618 8.51704 1.68835C7.08844 2.1429 5.14035 2.98708 3.51694 4.48061L3.452 4.54555C2.34808 5.7144 1.69872 7.20794 1.50391 9.02616C1.50391 9.0911 1.50391 9.15604 1.50391 9.15604C1.50391 9.28591 1.50391 9.67553 1.50391 10.195C1.56884 10.7794 1.56884 11.5587 1.56884 11.8184ZM5.07541 6.10402C6.37414 4.93517 7.99755 4.22087 9.36121 3.70138C12.7379 2.46758 14.9457 2.20784 18.6471 2.1429C18.9069 2.1429 23.9719 2.20784 27.8681 3.70138C29.2318 4.22087 30.8552 4.87023 32.1539 6.10402C32.8682 6.88326 33.3228 7.92224 33.4526 9.15604C33.4526 9.35084 33.4526 9.67553 33.4526 10.195C33.4526 10.8444 33.4526 11.5587 33.4526 11.7535C33.3877 13.247 31.9591 13.5717 31.7643 13.5717H27.2837C26.6343 13.5068 25.5953 13.247 25.5953 11.8184V9.15604C25.5953 8.63654 25.2706 8.24693 24.8161 8.05212C24.4265 7.92224 13.0626 7.92224 12.673 8.05212C12.2184 8.18199 11.8937 8.63654 11.8937 9.15604V11.8184C11.8937 13.247 10.8547 13.5068 10.2054 13.5717H5.72477C5.52996 13.5717 4.10136 13.247 4.03643 11.7535C4.03643 11.5587 4.03643 10.8444 4.03643 10.195C4.03643 9.67553 4.03643 9.41578 4.03643 9.22097C3.90655 7.92224 4.36111 6.88326 5.07541 6.10402Z"
-                    />
-                  </svg>
-                            </div>
-                            <div class="si">
-                                <h4 class="ra wi bj gj">
-                                    Phone Number
-                                </h4>
-                                <p class="ui hj">
-                                    +88 (800) 123 4567
-                                </p>
-                                <p class="ui hj">
-                                    +99 094 5445 433
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="oc vg im/3">
-                        <div class="na si">
-                            <div class="da oa sb kc bd je le ye fg ij jl ol">
-                                <svg width="47" height="47" viewBox="0 0 47 47" class="kg">
-                    <path
-                      d="M23.4996 0.95459C13.2918 0.95459 4.91992 9.03272 4.91992 18.8733C4.91992 26.7312 16.1559 39.7296 21.0027 45.0171C21.6637 45.7515 22.5449 46.1186 23.4996 46.1186C24.4543 46.1186 25.3355 45.7515 25.9965 45.0171C30.8434 39.803 42.0793 26.7312 42.0793 18.8733C42.0793 8.95928 33.7074 0.95459 23.4996 0.95459ZM24.0871 43.2546C23.7199 43.6218 23.2059 43.6218 22.9121 43.2546C19.3137 39.3624 7.49023 25.9968 7.49023 18.8733C7.49023 10.3546 14.6871 3.5249 23.4996 3.5249C32.3121 3.5249 39.509 10.428 39.509 18.8733C39.509 25.9968 27.6855 39.289 24.0871 43.2546Z"
-                    />
-                    <path
-                      d="M23.4996 11.5295C19.1668 11.5295 15.5684 15.0545 15.5684 19.4608C15.5684 23.7936 19.0934 27.392 23.4996 27.392C27.9059 27.392 31.4309 23.867 31.4309 19.4608C31.4309 15.0545 27.8324 11.5295 23.4996 11.5295ZM23.4996 24.7483C20.5621 24.7483 18.1387 22.3249 18.1387 19.3874C18.1387 16.4499 20.5621 14.0264 23.4996 14.0264C26.4371 14.0264 28.8605 16.4499 28.8605 19.3874C28.8605 22.3249 26.4371 24.7483 23.4996 24.7483Z"
-                    />
-                  </svg>
-                            </div>
-                            <div class="si">
-                                <h4 class="ra wi bj gj">
-                                    Our Address
-                                </h4>
-                                <p class="ui hj">
-                                    82 12th Street, Office 14,
-                                </p>
-                                <p class="ui hj">Edinburgh, UK</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="fg hh uo">
-            <div class="a da">
-                <div class="ea sb he">
-                    <div class="oc vg">
-                        <div class="da cb qd si ln">
-                            <span class="wa qb wi bj ij">
-                  Contact Us
-                </span>
-                            <h2 class="xa _i cj lj _l xm">
-                                How Can We Help You?
-                            </h2>
-                            <p class="ui hj">
-                                There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <form>
-                        <div class="ea sb he le">
-                            <div class="oc vg im/2">
-                                <div class="nb nn">
-                                    <label class="ra qb ui dj gj fm">
-                      Your Name <span class="oj">*</span>
-                    </label>
-                                    <input type="text" class="oc xe af tf wf zg sh ui fj hj _j lk ok tm um" />
-                                </div>
-                            </div>
-                            <div class="oc vg im/2">
-                                <div class="nb nn">
-                                    <label class="ra qb ui dj gj fm">
-                      Your Email <span class="oj">*</span>
-                    </label>
-                                    <input type="email" class="oc xe af tf wf zg sh ui fj hj _j lk ok tm um" />
-                                </div>
-                            </div>
-                            <div class="oc vg">
-                                <div class="nb nn">
-                                    <label class="ra qb ui dj gj fm">
-                      Your Message <span class="oj">*</span>
-                    </label>
-                                    <textarea rows="4" class="oc ee xe af tf wf zg sh ui fj hj _j lk ok tm um"></textarea>
-                                </div>
-                            </div>
-                            <div class="oc vg">
-                                <label for="checkboxLabelTwo" class="la sb ce je ui hj gm">
-                    <div class="relative">
-                      <input
-                        type="checkbox"
-                        id="checkboxLabelTwo"
-                        class="b"
+                    <div class="oc vg ao/2">
+                        <div class="la in mn sp">
+                            <div class="e ma se">
+                                <button @click=" modalOpen = true " class="d o p sb gc xc je le ye wf gj yj">
+                    <svg
+                      class="yb qc il ml"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M28.8281 24.4219L22.0313 17.5781C21.3281 16.875 20.0625 16.875 19.3594 17.5781L19.0312 17.9062L17.3438 16.1719C20.4844 12.4219 20.2969 6.84375 16.7813 3.375C15 1.59375 12.6094 0.609375 10.0781 0.609375C7.54688 0.609375 5.15625 1.59375 3.375 3.375C-0.328125 7.07812 -0.328125 13.125 3.375 16.7812C5.15625 18.5625 7.54688 19.5469 10.0781 19.5469C12.3281 19.5469 14.4844 18.75 16.1719 17.2969L17.9063 19.0312L17.5781 19.3594C16.8281 20.1094 16.8281 21.2812 17.5781 22.0312L24.375 28.8281C24.75 29.2031 25.2188 29.3906 25.6875 29.3906C26.2031 29.3906 26.6719 29.2031 27 28.8281L28.7813 27.0469C29.5781 26.3437 29.5781 25.1719 28.8281 24.4219ZM10.0781 17.9531C7.96875 17.9531 6 17.1562 4.54688 15.6562C1.5 12.6094 1.5 7.59375 4.54688 4.54687C6.04688 3.04687 8.01563 2.25 10.0781 2.25C12.1875 2.25 14.1563 3.04687 15.6094 4.54687C18.6563 7.59375 18.6563 12.6094 15.6094 15.6562C14.1563 17.1094 12.1875 17.9531 10.0781 17.9531ZM27.7031 25.9219L25.9219 27.7031C25.8281 27.7969 25.6875 27.7969 25.5938 27.7031L18.75 20.9062C18.6563 20.8125 18.6563 20.6719 18.75 20.5781L20.5313 18.7969C20.5781 18.75 20.6719 18.75 20.7188 18.75C20.7656 18.75 20.8125 18.75 20.9063 18.7969L27.7031 25.5937C27.7969 25.6875 27.7969 25.8281 27.7031 25.9219Z"
+                        fill="currentColor"
                       />
-                      <div
-                        class="box ta sb yb qc je le xe af uf"
-                      >
-                        <span class="uj">
-                          <svg
-                            width="11"
-                            height="8"
-                            viewBox="0 0 11 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10.0915 0.951972L10.0867 0.946075L10.0813 0.940568C9.90076 0.753564 9.61034 0.753146 9.42927 0.939309L4.16201 6.22962L1.58507 3.63469C1.40401 3.44841 1.11351 3.44879 0.932892 3.63584C0.755703 3.81933 0.755703 4.10875 0.932892 4.29224L0.932878 4.29225L0.934851 4.29424L3.58046 6.95832C3.73676 7.11955 3.94983 7.2 4.1473 7.2C4.36196 7.2 4.55963 7.11773 4.71406 6.9584L10.0468 1.60234C10.2436 1.4199 10.2421 1.1339 10.0915 0.951972ZM4.2327 6.30081L4.2317 6.2998C4.23206 6.30015 4.23237 6.30049 4.23269 6.30082L4.2327 6.30081Z"
-                              fill="#3056D3"
-                              stroke="#3056D3"
-                              stroke-width="0.4"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
-                    I agree that my submitted data is being collected and
-                    stored.
-                  </label>
+                      <path
+                        d="M12.5625 9.28125H10.9219V7.64062C10.9219 7.17187 10.5469 6.79688 10.0781 6.79688C9.60938 6.79688 9.23438 7.17187 9.23438 7.64062V9.28125H7.59375C7.125 9.28125 6.75 9.65625 6.75 10.125C6.75 10.5938 7.125 10.9687 7.59375 10.9687H9.23438V12.6094C9.23438 13.0781 9.60938 13.4531 10.0781 13.4531C10.5469 13.4531 10.9219 13.0781 10.9219 12.6094V10.9687H12.5625C13.0313 10.9687 13.4063 10.5938 13.4063 10.125C13.4063 9.65625 13.0313 9.28125 12.5625 9.28125Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                                <img src="{% static 'src/assets/ecom-images/products-details/details-02/big-image-01.jpg" alt="products-details' %}" class="oc ve" x-show="productOne " />
+                                <img src="{% static 'src/assets/ecom-images/products-details/details-02/big-image-02.jpg" alt="products-details' %}" class="oc ve" x-show="productTwo " />
+                                <img src="{% static 'src/assets/ecom-images/products-details/details-02/big-image-03.jpg" alt="products-details' %}" class="oc ve" x-show="productThree " />
+                                <img src="{% static 'src/assets/ecom-images/products-details/details-02/big-image-04.jpg" alt="products-details' %}" class="oc ve" x-show="productFour " />
                             </div>
-                            <div class="oc vg pl/12 yn/12">
-                                <div class="si">
-                                    <button type="submit" class="qb oc xe yf th ah si ui bj jj ak hk">
-                      Send Message
+                            <div class="ia sb je me">
+                                <div class="pc/4 lh">
+                                    <button @click="productOne = true; productTwo = false; productThree = false; productFour = false " :class=" productOne === true ? 'rf' : 'pf' " class="oc se ve df">
+                      <img
+                        src="{% static 'src/assets/ecom-images/products-details/details-02/thumbnail-01.jpg' %}"
+                        alt="thumbnail-01"
+                        class="oc"
+                      />
+                    </button>
+                                </div>
+                                <div class="pc/4 lh">
+                                    <button @click="productTwo = true; productOne = false; productThree = false; productFour = false " :class=" productTwo === true ? 'rf' : 'pf' " class="oc se ve df">
+                      <img
+                        src="{% static 'src/assets/ecom-images/products-details/details-02/thumbnail-02.jpg' %}"
+                        alt="thumbnail-01"
+                        class="oc"
+                      />
+                    </button>
+                                </div>
+                                <div class="pc/4 lh">
+                                    <button @click="productThree = true; productOne = false; productTwo = false; productFour = false " :class=" productThree === true ? 'rf' : 'pf' " class="oc se ve df">
+                      <img
+                        src="{% static 'src/assets/ecom-images/products-details/details-02/thumbnail-03.jpg' %}"
+                        alt="thumbnail-01"
+                        class="oc"
+                      />
+                    </button>
+                                </div>
+                                <div class="pc/4 lh">
+                                    <button @click="productFour = true; productOne = false; productTwo = false; productThree = false " :class=" productFour === true ? 'rf' : 'pf' " class="oc se ve df">
+                      <img
+                        src="{% static 'src/assets/ecom-images/products-details/details-02/thumbnail-04.jpg' %}"
+                        alt="thumbnail-01"
+                        class="oc"
+                      />
                     </button>
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
+
+                    <div class="oc vg ao/2">
+                        <div>
+                            <h2 class="oa vi bj gj yl lp oq">
+                                Macbook Pro M1 8/256GB
+                            </h2>
+
+                            <p class="oa ui dj hj">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non erat quam. Vestibulum aliquam nibh.
+                            </p>
+
+                            <div class="sb he je">
+                                <div class="sb je ji">
+                                    <h3 class="wi bj gj bm _m lp oq">
+                                        <span class="hi"> $1200.99 </span>
+                                        <span class="hj qj">
+                        $1500.99
+                      </span>
+                                    </h3>
+                                </div>
+                                <div class="sb je">
+                                    <span class="uh">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10 19.625C4.6875 19.625 0.40625 15.3125 0.40625 10C0.40625 4.6875 4.6875 0.40625 10 0.40625C15.3125 0.40625 19.625 4.6875 19.625 10C19.625 15.3125 15.3125 19.625 10 19.625ZM10 1.5C5.3125 1.5 1.5 5.3125 1.5 10C1.5 14.6875 5.3125 18.5313 10 18.5313C14.6875 18.5313 18.5313 14.6875 18.5313 10C18.5313 5.3125 14.6875 1.5 10 1.5Z"
+                          fill="#13C296"
+                        />
+                        <path
+                          d="M8.9375 12.1875C8.71875 12.1875 8.53125 12.125 8.34375 11.9687L6.28125 9.96875C6.0625 9.75 6.0625 9.40625 6.28125 9.1875C6.5 8.96875 6.84375 8.96875 7.0625 9.1875L8.9375 11.0312L12.9375 7.15625C13.1562 6.9375 13.5 6.9375 13.7188 7.15625C13.9375 7.375 13.9375 7.71875 13.7188 7.9375L9.5625 12C9.34375 12.125 9.125 12.1875 8.9375 12.1875Z"
+                          fill="#13C296"
+                        />
+                      </svg>
+                    </span>
+                                    <span class="ui dj gj">
+                      In Stock
+                    </span>
+                                </div>
+                            </div>
+
+                            <div class="jb">
+                                <h4 class="xa wi bj gj">
+                                    Color
+                                </h4>
+                                <div class="sb je pe">
+                                    <div class="e">
+                                        <input type="radio" name="productColor" id="black" class="productColor b" />
+                                        <label for="black" class="sb hc yc ce je le ye df sf">
+                        <span
+                          class="hc yc ye bg"
+                        ></span>
+                      </label>
+                                    </div>
+                                    <div class="e">
+                                        <input type="radio" name="productColor" id="black2" class="productColor b" />
+                                        <label for="black2" class="sb hc yc ce je le ye df qf">
+                        <span
+                          class="hc yc ye cg"
+                        ></span>
+                      </label>
+                                    </div>
+                                    <div class="e">
+                                        <input type="radio" name="productColor" id="black3" class="productColor b" />
+                                        <label for="black3" class="sb hc yc ce je le ye df nf">
+                        <span
+                          class="hc yc ye dg"
+                        ></span>
+                      </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="jb">
+                                <h4 class="xa wi bj gj">
+                                    Specification
+                                </h4>
+                                <div class="qe">
+                                    <p class="ui dj hj dl">
+                                        <span class="qb zc"> Memory : </span>
+                                        <span> 8GB unified memory </span>
+                                    </p>
+                                    <p class="ui dj hj dl">
+                                        <span class="qb zc"> Storage : </span>
+                                        <span> 256GB/512GB SSD storage </span>
+                                    </p>
+                                    <p class="ui dj hj dl">
+                                        <span class="qb zc"> Display : </span>
+                                        <span> 13-inch Retina display with True Tone </span>
+                                    </p>
+                                    <p class="ui dj hj dl">
+                                        <span class="qb zc"> Processor : </span>
+                                        <span> Apple M1 chip with 8-core CPU & GPU </span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="jb sb he">
+                                <div class="eb oa">
+                                    <h4 class="xa wi bj gj">
+                                        RAM
+                                    </h4>
+                                    <div class="sb je oe">
+                                        <div>
+                                            <input type="radio" name="ram" id="8gb" class="ram-size b" />
+                                            <label for="8gb" class="rb ce xe af nf mh vg ui bj gj">
+                          8GB
+                        </label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="ram" id="16gb" class="ram-size b" />
+                                            <label for="16gb" class="rb ce xe af nf mh vg ui bj gj">
+                          16GB
+                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="oa">
+                                    <h4 class="xa wi bj gj">
+                                        Storage
+                                    </h4>
+                                    <div class="sb je oe">
+                                        <div>
+                                            <input type="radio" name="storage" id="256gb" class="ram-size b" />
+                                            <label for="256gb" class="rb ce xe af nf mh vg ui bj gj">
+                          256GB
+                        </label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="storage" id="512gb" class="ram-size b" />
+                                            <label for="512gb" class="rb ce xe af nf mh vg ui bj gj">
+                          512GB
+                        </label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="storage" id="1tb" class="ram-size b" />
+                                            <label for="1tb" class="rb ce xe af nf mh vg ui bj gj">
+                          1TB
+                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sb he">
+                                <div x-data="
+                      {
+                        quantity: 1
+                      }
+                    " class="ya xa tb je xe af nf ui dj gj">
+                                    <span @click=" quantity > 1 && quantity-- " class="rb ce de nh vg">
+                      -
+                    </span>
+                                    <span class="rb nh vg" x-text="quantity">
+                    </span>
+                                    <span @click=" quantity++ " class="rb ce de nh vg">
+                      +
+                    </span>
+                                </div>
+
+                                <div class="ya xa">
+                                    <button class="tb je le we yf mh yg si ui bj jj hk">
+                      Add to Cart
+                    </button>
+                                </div>
+                                <div class="ya xa">
+                                    <button class="tb je le we bg mh yg si ui bj jj hk">
+                      Buy Now
+                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div x-show=" modalOpen " class="c h m aa sb wb oc je le bg ig">
+            <div @click.outside=" modalOpen = false " class="da rb _c/5 nl/4 ao/2">
+                <img src="{% static 'src/assets/ecom-images/products-details/details-02/big-image-01.jpg' %}" alt="products-details" class="oc ve" x-show="productOne " />
+                <img src="{% static 'src/assets/ecom-images/products-details/details-02/big-image-02.jpg' %}" alt="products-details" class="oc ve" x-show="productTwo " />
+                <img src="{% static 'src/assets/ecom-images/products-details/details-02/big-image-03.jpg' %}" alt="products-details" class="oc ve" x-show="productThree " />
+                <img src="{% static 'src/assets/ecom-images/products-details/details-02/big-image-04.jpg' %}" alt="products-details" class="oc ve" x-show="productFour " />
+            </div>
+        </div>
+    </section>
+    <!-- ====== Products Details End -->
+
+    <!-- ====== Reviews Section Start -->
+    <section class="wf ki li">
+        <div class="a da">
+            <div class="ea sb he">
+                <div class="oc vg bq/12">
+                    <div class="la ff nf bi">
+                        <div class="kb">
+                            <div class="je me hm">
+                                <div class="xa sb je">
+                                    <div class="ta gc xc se ye">
+                                        <img src="{% static 'src/assets/ecom-images/reviews/review-05/image-01.png' %}" alt="author" class="wb oc mg ng" />
+                                    </div>
+                                    <div class="sb je">
+                                        <h3 class="ya if nf hi wi dj gj">
+                                            Wilium Heli
+                                        </h3>
+                                        <p class="xi bj hj">
+                                            22, April 2025
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="xa sb je">
+                                    <div class="ya sb je">
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                    </div>
+                                    <p class="wi dj hj">
+                                        Rating:
+                                        <span class="cj gj"> 5.0 </span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="la">
+                                <h4 class="xa wi cj gj am">
+                                    This is one of the best product.
+                                </h4>
+                                <p class="qa ui dj hj">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac risus a risus elementum vehicula. Class aptent taciti socil ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                </p>
+                                <button class="tb je le we yf eh _g si ui bj jj hk">
+                    Reply
+                  </button>
+                            </div>
+                        </div>
+                        <div class="kb cl em">
+                            <div class="je me hm">
+                                <div class="xa sb je">
+                                    <div class="ta gc xc se ye">
+                                        <img src="{% static 'src/assets/ecom-images/reviews/review-05/image-02.png' %}" alt="author" class="wb oc mg ng" />
+                                    </div>
+                                    <div class="sb je">
+                                        <h3 class="ya if nf hi wi dj gj">
+                                            Frank Lerry
+                                        </h3>
+                                        <p class="xi bj hj">
+                                            22, April 2025
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p class="ui dj hj">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac risus a risus elementum vehicula. Class aptent taciti socil ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="la ff nf bi">
+                        <div>
+                            <div class="je me hm">
+                                <div class="xa sb je">
+                                    <div class="ta gc xc se ye">
+                                        <img src="{% static 'src/assets/ecom-images/reviews/review-05/image-01.png' %}" alt="author" class="wb oc mg ng" />
+                                    </div>
+                                    <div class="sb je">
+                                        <h3 class="ya if nf hi wi dj gj">
+                                            Wilium Heli
+                                        </h3>
+                                        <p class="xi bj hj">
+                                            22, April 2025
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="xa sb je">
+                                    <div class="ya sb je">
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                    </div>
+                                    <p class="wi dj hj">
+                                        Rating:
+                                        <span class="cj gj"> 5.0 </span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="xa wi cj gj am">
+                                    This is one of the best product.
+                                </h4>
+                                <p class="qa ui dj hj">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac risus a risus elementum vehicula. Class aptent taciti socil ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                </p>
+                                <button class="tb je le we yf eh _g si ui bj jj hk">
+                    Reply
+                  </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bi">
+                        <div>
+                            <div class="je me hm">
+                                <div class="xa sb je">
+                                    <div class="ta gc xc se ye">
+                                        <img src="{% static 'src/assets/ecom-images/reviews/review-05/image-01.png' %}" alt="author" class="wb oc mg ng" />
+                                    </div>
+                                    <div class="sb je">
+                                        <h3 class="ya if nf hi wi dj gj">
+                                            Wilium Heli
+                                        </h3>
+                                        <p class="xi bj hj">
+                                            22, April 2025
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="xa sb je">
+                                    <div class="ya sb je">
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                        <span class="db">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.6562 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75 0.84375 9.5625 1.21875L7 6.625L1.375 7.46875C0.968746 7.53125 0.812496 8.0625 1.125 8.34375L5.21875 12.5625L4.25 18.4688C4.1875 18.875 4.59375 19.2188 4.96875 18.9688L10.0625 16.1875L15.125 18.9688C15.4687 19.1562 15.9062 18.8438 15.8125 18.4688L14.8437 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6562 7.46875Z"
+                            fill="#FFA645"
+                          />
+                        </svg>
+                      </span>
+                                    </div>
+                                    <p class="wi dj hj">
+                                        Rating:
+                                        <span class="cj gj"> 5.0 </span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="xa wi cj gj am">
+                                    This is one of the best product.
+                                </h4>
+                                <p class="qa ui dj hj">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac risus a risus elementum vehicula. Class aptent taciti socil ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                </p>
+                                <button class="tb je le we yf eh _g si ui bj jj hk">
+                    Reply
+                  </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="oh xl">
+                        <h4 class="xa vi cj gj bm mp pq">
+                            Write a Review
+                        </h4>
+                        <p class="wa ui dj gj">
+                            Click on star to review
+                        </p>
+                        <div class="ma sb je">
+                            <span class="db">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.6563 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75001 0.84375 9.56251 1.21875L7.00001 6.625L1.37501 7.46875C0.968761 7.53125 0.812511 8.0625 1.12501 8.34375L5.21876 12.5625L4.25001 18.4688C4.18751 18.875 4.59376 19.2188 4.96876 18.9688L10.0625 16.1875L15.125 18.9688C15.4688 19.1562 15.9063 18.8438 15.8125 18.4688L14.8438 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6563 7.46875Z"
+                      fill="#FFA645"
+                    />
+                  </svg>
+                </span>
+                            <span class="db">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.6563 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75001 0.84375 9.56251 1.21875L7.00001 6.625L1.37501 7.46875C0.968761 7.53125 0.812511 8.0625 1.12501 8.34375L5.21876 12.5625L4.25001 18.4688C4.18751 18.875 4.59376 19.2188 4.96876 18.9688L10.0625 16.1875L15.125 18.9688C15.4688 19.1562 15.9063 18.8438 15.8125 18.4688L14.8438 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6563 7.46875Z"
+                      fill="#FFA645"
+                    />
+                  </svg>
+                </span>
+                            <span class="db">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.6563 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75001 0.84375 9.56251 1.21875L7.00001 6.625L1.37501 7.46875C0.968761 7.53125 0.812511 8.0625 1.12501 8.34375L5.21876 12.5625L4.25001 18.4688C4.18751 18.875 4.59376 19.2188 4.96876 18.9688L10.0625 16.1875L15.125 18.9688C15.4688 19.1562 15.9063 18.8438 15.8125 18.4688L14.8438 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6563 7.46875Z"
+                      fill="#FFA645"
+                    />
+                  </svg>
+                </span>
+                            <span class="db">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.6563 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75001 0.84375 9.56251 1.21875L7.00001 6.625L1.37501 7.46875C0.968761 7.53125 0.812511 8.0625 1.12501 8.34375L5.21876 12.5625L4.25001 18.4688C4.18751 18.875 4.59376 19.2188 4.96876 18.9688L10.0625 16.1875L15.125 18.9688C15.4688 19.1562 15.9063 18.8438 15.8125 18.4688L14.8438 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6563 7.46875Z"
+                      fill="#FFA645"
+                    />
+                  </svg>
+                </span>
+                            <span class="db">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.6563 7.46875L13 6.59375L10.4375 1.21875C10.25 0.84375 9.75001 0.84375 9.56251 1.21875L7.00001 6.625L1.37501 7.46875C0.968761 7.53125 0.812511 8.0625 1.12501 8.34375L5.21876 12.5625L4.25001 18.4688C4.18751 18.875 4.59376 19.2188 4.96876 18.9688L10.0625 16.1875L15.125 18.9688C15.4688 19.1562 15.9063 18.8438 15.8125 18.4688L14.8438 12.5625L18.9375 8.34375C19.1875 8.0625 19.0625 7.53125 18.6563 7.46875Z"
+                      fill="#FFA645"
+                    />
+                  </svg>
+                </span>
+                        </div>
+
+                        <form>
+                            <div class="fa sb he">
+                                <div class="oc wg ll/2">
+                                    <div class="ma">
+                                        <input type="text" placeholder="First Name" class="oc ve af nf zg yg dj hj rj _j ak lk pk qk rk" />
+                                    </div>
+                                </div>
+                                <div class="oc wg ll/2">
+                                    <div class="ma">
+                                        <input type="text" placeholder="Last Name" class="oc ve af nf zg yg dj hj rj _j ak lk pk qk rk" />
+                                    </div>
+                                </div>
+                                <div class="oc wg">
+                                    <div class="ma">
+                                        <input type="text" placeholder="Type review headline" class="oc ve af nf zg yg dj hj rj _j ak lk pk qk rk" />
+                                    </div>
+                                </div>
+                                <div class="oc wg">
+                                    <div class="qa">
+                                        <textarea rows="6" placeholder="Write your Review" class="oc ve af nf zg yg dj hj rj _j ak lk pk qk rk"></textarea>
+                                    </div>
+                                </div>
+                                <div class="oc wg">
+                                    <div>
+                                        <button class="tb je le we yf zg dh si ui bj jj hk">
+                        Submit Review
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ====== Contact Section End -->
+    <!-- ====== Reviews Section End -->
 
     <!-- ====== eCommerce Footer Section Start -->
     <footer class="bg">
